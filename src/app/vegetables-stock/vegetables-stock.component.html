@@ -1,0 +1,50 @@
+<!---{{products | json}}-->
+<div class="container">
+    <h3>ViewAll Products</h3><br><br>
+    <button type="button" class="btn btn-primary" routerLink="/vegetables-list">Create New Products</button>
+    <button type="button" class="btn btn-primary" id="btn" (click)="sortsList()">Sorts</button>
+    <div class="container">
+        <h1>My Items</h1>
+        <ul class="list-group">
+            <!-- display the current page of items here -->
+        </ul>
+
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-center">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link">1</a></li>
+                <li class="page-item"><a class="page-link">2</a></li>
+                <li class="page-item"><a class="page-link">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Vegetables</th>
+                <th>Amount</th>
+                <th>Acetion</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let Vegetable of products">
+            <td class="table-active">{{Vegetable.id}}</td>
+            <td>{{Vegetable.vegetablenames}}</td>
+            <td class="table-active">{{Vegetable.price}}</td>
+            <td><button type="button" (click)="Update(Vegetable.id)" class="btn btn-warning">Update</button>
+                <button type="button" (click)="Delete(Vegetable.id)" class="btn btn-warning">Delete</button>
+            </td>
+        </tr>
+    </table>
+
+</div>

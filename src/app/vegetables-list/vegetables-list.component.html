@@ -1,0 +1,25 @@
+<div class="container">
+ <section class="text-center">
+    <div class="card mx-4 mx-md-5 shadow-5-strong" style="
+        margin-top: -100px;
+        background: hsla(0, 0%, 100%, 0.8);
+        backdrop-filter: blur(30px);
+        ">
+        <div class="card-body py-5 px-md-5">
+            <div class="row d-flex justify-content-center">
+              <div class="col-lg-8">
+                 <h2>{{title}}</h2>
+                 <form>
+                    <input type="number" class="form-control mb-3" placeholder="ID"  [(ngModel)]="id" name="pid"/>
+                    <input type="text" class="form-control mb-3" placeholder="Vegetables Name" name="pname" [(ngModel)]="vegetablenames"  />
+                    <input type="number" class="form-control me-2" placeholder="Amount"  name="pprice" [(ngModel)]="price"  />
+                    <button type="submit" class="btn btn-primary" id="but" (click)="addProducts()">{{buttonText}}</button>
+                 </form>
+              </div>
+            </div>
+        </div>
+     </div>
+ </section>
+ 
+</div>
+
